@@ -12,12 +12,27 @@
   function applyLang(v){lang=v;html.lang=v;html.dir=v==="ar"?"rtl":"ltr";qsa("[data-en][data-ar]").forEach(el=>el.textContent=el.dataset[v]);const b=qs("#langBtn");if(b)b.textContent=v==="ar"?"EN":"AR";localStorage.setItem("alqanas-lang",v)}
   applyTheme(theme);applyLang(lang);
 
-  /* Prefer the full-resolution AVIF portrait while keeping the JPEG as a fallback. */
-  qsa('img[src="assets/yasser-ismail.jpg"]').forEach(img=>{
-    const hi=new Image();
-    hi.onload=()=>{img.src="assets/yasser-ismail.avif";img.dataset.fullres="1"};
-    hi.src="assets/yasser-ismail.avif";
-  });
+  /* Rebuild the full-resolution portrait from small static chunks.
+     The regular JPEG remains visible as a fallback until hydration completes. */
+  async function hydrateFullYasser(){
+    const imgs=qsa('img[src="assets/yasser-ismail.jpg"]');
+    if(!imgs.length) return;
+    try{
+      const names=Array.from({length:7},(_,i)=>`assets/yasser-full/part-${String(i+1).padStart(2,"0")}.txt`);
+      const parts=await Promise.all(names.map(name=>fetch(name,{cache:"force-cache"}).then(r=>{
+        if(!r.ok) throw new Error(name);
+        return r.text();
+      })));
+      const bin=atob(parts.join(""));
+      const bytes=new Uint8Array(bin.length);
+      for(let i=0;i<bin.length;i++) bytes[i]=bin.charCodeAt(i);
+      const url=URL.createObjectURL(new Blob([bytes],{type:"image/avif"}));
+      imgs.forEach(img=>{img.src=url;img.dataset.fullres="1"});
+    }catch(e){
+      console.warn("Full-resolution portrait fallback active.",e);
+    }
+  }
+  hydrateFullYasser();
 
   /* loader inspired by rotating-ring loaders, custom Al Qanas execution */
   const loader=qs("#loader"), loaderWord=qs("#loaderWord"),loaderBar=qs("#loaderBar"),loaderPct=qs("#loaderPct");
