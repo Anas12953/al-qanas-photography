@@ -1,0 +1,105 @@
+@media(max-width:760px){
+  .progressive-blur{display:none}
+  .nav-links>a:not(.active-nav){display:none}
+  .gallery-hero{padding-top:95px;min-height:auto}
+  .gallery-hero-copy{min-height:500px;border-radius:28px;padding:28px}.gallery-hero-copy h1{font-size:clamp(64px,19vw,100px)}
+  .gallery-stats{grid-template-columns:1fr}.glass-icon-card{min-height:112px;flex-direction:row;text-align:left;justify-content:flex-start}
+  html[dir="rtl"] .glass-icon-card{text-align:right}
+  .gallery-toolbar{align-items:flex-start;flex-direction:column}.gallery-hint{display:none}
+  .bento-gallery{grid-template-columns:1fr 1fr;grid-auto-rows:150px;gap:8px}
+  .bento-a,.bento-b,.bento-c,.bento-d,.bento-e,.bento-f,.bento-g,.bento-h,.bento-i,.bento-j,.bento-k,.bento-l{grid-column:span 1;grid-row:span 2}
+  .bento-a,.bento-d,.bento-f,.bento-j,.bento-l{grid-column:span 2}
+  .gallery-cta{min-height:290px}.gallery-cta-go{width:58px;height:58px}
+  .gallery-lightbox{padding:10px}.lightbox-frame{width:100%;height:84vh;border-radius:23px}
+  .command-search kbd{display:none}
+  .search-toggle,.sound-toggle{display:grid!important}
+}
+@media(max-width:520px){
+  .bento-gallery{grid-template-columns:1fr}.bento-a,.bento-b,.bento-c,.bento-d,.bento-e,.bento-f,.bento-g,.bento-h,.bento-i,.bento-j,.bento-k,.bento-l{grid-column:span 1;grid-row:span 2}
+  .bento-photo{min-height:310px}
+}
+
+/* more natural staggered entrance on gallery */
+.bento-photo:nth-child(3n/**/+2){--delay:80ms}.bento-photo:nth-child(3n/**/+3){--delay:150ms}
+
+/* Fix contrast in contact CTA in all states */
+.contact .btn,.contact .btn:hover,.contact .btn:focus-visible{opacity:1!important;visibility:visible!important}
+.contact .btn:focus-visible{outline:2px solid color-mix(in srgb,var(--ink) 40%,transparent);outline-offset:3px}
+
+
+/* =========================================================
+   V4.1 — Arabic typography + cursor/audio reliability fixes
+   ========================================================= */
+
+/* Arabic display faces need substantially more vertical room for dots,
+   hamza forms, and stacked marks than the Latin display settings. */
+html[lang="ar"] .hero h1{
+  line-height:1.15 !important;
+  padding-block:.025em .08em;
+}
+html[lang="ar"] .section-title,
+html[lang="ar"] .horizontal-title,
+html[lang="ar"] .gallery-title,
+html[lang="ar"] .project-info h2,
+html[lang="ar"] .next-project h3{
+  line-height:1.22 !important;
+  padding-block:.02em .08em;
+}
+html[lang="ar"] .project-hero-text h1{
+  line-height:1.16 !important;
+  padding-block:.025em .09em;
+}
+html[lang="ar"] .contact h2{
+  line-height:1.22 !important;
+  letter-spacing:-.018em !important;
+  padding-block:.03em .12em;
+  overflow:visible;
+}
+html[lang="ar"] .gallery-hero-copy h1{
+  line-height:1.16 !important;
+  padding-block:.03em .09em;
+}
+html[lang="ar"] .about-main h3,
+html[lang="ar"] .name-story h3{
+  line-height:1.23 !important;
+  padding-block:.025em .07em;
+}
+html[lang="ar"] .contact p,
+html[lang="ar"] .section-copy,
+html[lang="ar"] .hero-lead{
+  line-height:1.95;
+}
+
+/* Never hide the operating-system cursor until JavaScript confirms that
+   the custom cursor is actually running. */
+@media(pointer:fine){
+  body,a,button,input{cursor:auto!important}
+  body.custom-cursor-active,
+  body.custom-cursor-active a,
+  body.custom-cursor-active button,
+  body.custom-cursor-active input{
+    cursor:none!important;
+  }
+}
+body:not(.custom-cursor-active) .cursor,
+body:not(.custom-cursor-active) .cursor-dot{
+  display:none!important;
+}
+
+/* Give the custom pointer extra contrast in both themes. */
+body.custom-cursor-active .cursor{
+  box-shadow:
+    0 0 0 1px color-mix(in srgb,var(--bg) 42%,transparent),
+    0 3px 20px color-mix(in srgb,var(--accent) 16%,transparent);
+}
+body.custom-cursor-active .cursor-dot{
+  box-shadow:0 0 12px color-mix(in srgb,var(--accent) 65%,transparent);
+}
+
+/* Audible/sound state gets a tiny visual confirmation. */
+.sound-toggle.sound-pulse{
+  animation:soundControlPulse .42s cubic-bezier(.16,1,.3,1);
+}
+@keyframes soundControlPulse{
+  45%{transform:scale(1.13);background:color-mix(in srgb,var(--accent) 15%,transparent)}
+}
