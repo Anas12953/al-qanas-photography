@@ -1,1 +1,236 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="refresh" content="0;url=home.html"><title>Al Qanas Photography</title></head><body style="margin:0;background:#0A0908;color:#EAE0D5;font-family:system-ui;display:grid;place-items:center;min-height:100vh">Opening Al Qanas Photography…<script>location.replace('home.html')</script></body></html>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0A0908">
+<meta name="description" content="Al Qanas Photography — educational photography by Yasser Ismail in the UAE.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Noto+Kufi+Arabic:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+<script>
+(()=>{const t=localStorage.getItem("alqanas-theme")||(matchMedia("(prefers-color-scheme: light)").matches?"light":"dark");document.documentElement.dataset.theme=t;const l=localStorage.getItem("alqanas-lang")||"en";document.documentElement.lang=l;document.documentElement.dir=l==="ar"?"rtl":"ltr"})()
+</script>
+<title>Al Qanas Photography — Yasser Ismail</title>
+</head>
+<body>
+<div class="noise"></div>
+<div class="scroll-progress" aria-hidden="true"><i id="scrollProgressBar"></i></div>
+<div class="progressive-blur blur-top" aria-hidden="true"></div>
+<div class="progressive-blur blur-bottom" aria-hidden="true"></div>
+<div id="intro">
+  <div class="intro-core">
+    <div class="intro-reticle"><i></i></div>
+    <div class="intro-word"><span>AL QANAS</span></div>
+    <div class="intro-sub">Photography · UAE</div>
+<div class="intro-progress"><span id="introPercent">00</span><i><b id="introBar"></b></i><span>100</span></div>
+  </div>
+</div>
+<div class="cursor"></div><div class="cursor-dot"></div>
+<div class="hover-preview"><img alt=""></div>
+
+<div class="site-nav-wrap">
+<nav class="site-nav glass">
+<a class="brand" href="#top">
+<span class="brand-mark">
+<svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+  <circle cx="24" cy="24" r="15" stroke="currentColor" stroke-width="1.5"/>
+  <circle cx="24" cy="24" r="4" stroke="currentColor" stroke-width="1.5"/>
+  <path d="M24 2v11M24 35v11M2 24h11M35 24h11" stroke="currentColor" stroke-width="1.5"/>
+</svg>
+</span><span>AL QANAS PHOTOGRAPHY</span></a>
+<div class="nav-links">
+<a href="#work" data-en="Work" data-ar="الأعمال">Work</a>
+<a href="gallery.html" data-en="Gallery" data-ar="المعرض">Gallery</a>
+<a href="#about" data-en="About" data-ar="نبذة">About</a>
+<a href="#services" data-en="Services" data-ar="الخدمات">Services</a>
+<a class="nav-cta" href="https://iwtsp.com/971502549876" target="_blank" rel="noopener" data-en="Book a shoot" data-ar="احجز جلسة">Book a shoot</a>
+
+<button class="round-btn theme-toggle" id="themeToggle" aria-label="Switch theme">
+<svg class="moon" viewBox="0 0 24 24" fill="none"><path d="M20 15.2A8.5 8.5 0 0 1 8.8 4a8.5 8.5 0 1 0 11.2 11.2Z" stroke="currentColor" stroke-width="1.8"/></svg>
+<svg class="sun" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="3.5" stroke="currentColor" stroke-width="1.8"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+</button>
+<button class="round-btn" id="langToggle" aria-label="Switch language">AR</button>
+</div>
+</nav>
+</div>
+
+<main id="top">
+<section class="hero">
+<div class="shell">
+<div class="hero-grid">
+  <div class="hero-copy glass liquid-glass spotlight reveal">
+    <div>
+      <div class="eyebrow" data-en="UAE · EDUCATIONAL PHOTOGRAPHY · 2025–2026" data-ar="الإمارات · تصوير تعليمي · 2025–2026">UAE · EDUCATIONAL PHOTOGRAPHY · 2025–2026</div>
+      <h1><span data-en="Moments," data-ar="لحظات،">Moments,</span><br><span class="accent accent-font" data-en="in focus." data-ar="في بؤرة التركيز.">in focus.</span></h1>
+      <p class="hero-lead" data-en="Meaningful photography for kindergartens, schools and universities — captured with the patience of a teacher and the precision of a marksman." data-ar="تصوير هادف لرياض الأطفال والمدارس والجامعات — بصبر المعلّم ودقّة القنّاص.">Meaningful photography for kindergartens, schools and universities — captured with the patience of a teacher and the precision of a marksman.</p>
+    </div>
+    <div>
+      <div class="hero-actions">
+        <a href="#work" class="btn primary"><span data-en="View selected work" data-ar="شاهد مختارات الأعمال">View selected work</span><span class="arrow">↗</span></a>
+        <a href="#about" class="btn"><span data-en="Meet Yasser" data-ar="تعرّف على ياسر">Meet Yasser</span><span class="arrow">↓</span></a>
+      </div>
+      <div class="scroll-cue"><span data-en="Scroll to explore" data-ar="مرّر للاستكشاف">Scroll to explore</span><i></i></div>
+    </div>
+  </div>
+  <div class="hero-media reveal">
+    <img src="assets/yasser-ismail.jpg" alt="Yasser Ismail, photographer and educator">
+    <div class="scope"><i></i></div>
+    <div class="hero-tag glass">
+      <div><b>Yasser Ismail</b><br><span data-en="Photographer · Educator" data-ar="مصوّر · تربوي">Photographer · Educator</span></div>
+      <span data-en="United Arab Emirates" data-ar="دولة الإمارات العربية المتحدة">United Arab Emirates</span>
+    </div>
+  </div>
+</div>
+<div class="ticker"><div class="ticker-track">
+<span>School Portraits</span><span>Graduations</span><span>Events</span><span>Classroom Stories</span><span>University Life</span><span>Creative Direction</span>
+<span>School Portraits</span><span>Graduations</span><span>Events</span><span>Classroom Stories</span><span>University Life</span><span>Creative Direction</span>
+</div></div>
+</div>
+</section>
+
+<section id="about">
+<div class="shell">
+<div class="section-head reveal">
+  <div class="section-kicker" data-en="01 · ABOUT" data-ar="01 · نبذة">01 · ABOUT</div>
+  <div><h2 class="section-title" data-en="Photography shaped by education." data-ar="تصوير تصنعه خبرة التعليم.">Photography shaped by education.</h2>
+  <p class="section-copy" data-en="Yasser Ismail works where education and visual storytelling meet. As a teacher in the UAE Ministry of Education and the photographer behind Al Qanas Photography, he understands the people, pace and small moments that make educational communities memorable." data-ar="يعمل ياسر إسماعيل عند نقطة التقاء التعليم والسرد البصري. وبصفته معلماً في وزارة التربية والتعليم بدولة الإمارات والمصوّر وراء «القنّاص للتصوير»، فهو يفهم الأشخاص وإيقاع اليوم واللحظات الصغيرة التي تصنع ذاكرة المجتمع التعليمي.">Yasser Ismail works where education and visual storytelling meet.</p></div>
+</div>
+<div class="about-layout">
+  <article class="about-main glass liquid-glass spotlight reveal">
+    <h3 data-en="Not just a photographer in a school — someone who understands the school." data-ar="ليس مجرد مصوّر داخل المدرسة — بل شخص يفهم المدرسة.">Not just a photographer in a school — someone who understands the school.</h3>
+    <p data-en="From a first day in kindergarten to a university milestone, every frame is approached with patience, awareness and respect for the people in it. The goal is polished photography that still feels alive." data-ar="من أول يوم في الروضة إلى محطة جامعية مهمة، تُلتقط كل صورة بصبر ووعي واحترام للأشخاص فيها. الهدف هو صور مصقولة ومحترفة تبقى نابضة بالحياة.">From a first day in kindergarten to a university milestone, every frame is approached with patience.</p>
+    <div class="facts">
+      <div class="fact"><strong>2025–26</strong><span data-en="Current portfolio year" data-ar="عام ملف الأعمال الحالي">Current portfolio year</span></div>
+      <div class="fact"><strong>UAE</strong><span data-en="Based & working locally" data-ar="مقيم ويعمل محلياً">Based & working locally</span></div>
+      <div class="fact"><strong>3×</strong><span data-en="Kindergarten · School · University" data-ar="روضة · مدرسة · جامعة">Kindergarten · School · University</span></div>
+      <div class="fact"><strong>2 roles</strong><span data-en="Photographer · Educator" data-ar="مصوّر · تربوي">Photographer · Educator</span></div>
+    </div>
+  </article>
+  <article class="name-story reveal">
+    <div class="section-kicker" style="color:inherit" data-en="THE NAME" data-ar="فكرة الاسم">THE NAME</div>
+    <h3>AL<br>QANAS</h3>
+    <p data-en="“Al Qanas” means “the sniper.” The photography metaphor is precision: notice the moment, lock onto the story, then take the shot. It becomes a quiet visual signature rather than a literal theme." data-ar="«القنّاص» اسم قائم على فكرة الدقّة: نلاحظ اللحظة، نركّز على القصة، ثم نلتقط الصورة. الفكرة تتحول إلى توقيع بصري هادئ بدلاً من أن تكون موضوعاً حرفياً.">“Al Qanas” means “the sniper.” The photography metaphor is precision.</p>
+    <div class="reticle-bg"></div>
+  </article>
+</div>
+</div>
+</section>
+
+<section id="work">
+<div class="shell">
+<div class="section-head reveal">
+  <div class="section-kicker" data-en="02 · SELECTED WORK" data-ar="02 · مختارات الأعمال">02 · SELECTED WORK</div>
+  <div><h2 class="section-title" data-en="Stories from the school year." data-ar="حكايات من العام الدراسي.">Stories from the school year.</h2>
+  <p class="section-copy" data-en="These are temporary stock-photo project previews for the 2025–2026 portfolio. Every image slot is ready to be replaced with Yasser’s final photography later." data-ar="هذه معاينات مؤقتة بصور تجريبية لملف أعمال 2025–2026. جميع أماكن الصور جاهزة للاستبدال بصور ياسر النهائية لاحقاً.">Temporary stock-photo project previews for the 2025–2026 portfolio.</p></div>
+</div>
+<div class="work-grid">
+  <a class="project-card wide spotlight reveal cinematic" data-project-transition href="projects/kindergarten-stories.html">
+    <img src="assets/kindergarten-circle.jpg" alt="Kindergarten classroom placeholder photography">
+    <div class="project-meta"><div><small data-en="Kindergarten · Placeholder" data-ar="رياض الأطفال · صورة مؤقتة">Kindergarten · Placeholder</small><strong data-en="First Days, Big Stories" data-ar="بدايات صغيرة، حكايات كبيرة">First Days, Big Stories</strong></div><div class="go">↗</div></div>
+  </a>
+  <a class="project-card narrow spotlight reveal cinematic" style="--delay:100ms" data-project-transition href="projects/school-events.html">
+    <img src="assets/school-exhibition.jpg" alt="School exhibition placeholder photography">
+    <div class="project-meta"><div><small data-en="School Events · Placeholder" data-ar="فعاليات مدرسية · صورة مؤقتة">School Events · Placeholder</small><strong data-en="In Motion" data-ar="في قلب الحدث">In Motion</strong></div><div class="go">↗</div></div>
+  </a>
+  <a class="project-card spotlight reveal cinematic" data-project-transition href="projects/portraits-year.html">
+    <img src="assets/school-event.jpg" alt="School portrait placeholder photography">
+    <div class="project-meta"><div><small data-en="Portraits · Placeholder" data-ar="بورتريه · صورة مؤقتة">Portraits · Placeholder</small><strong data-en="Faces of the Year" data-ar="وجوه العام">Faces of the Year</strong></div><div class="go">↗</div></div>
+  </a>
+  <a class="project-card spotlight reveal cinematic" style="--delay:100ms" data-project-transition href="projects/university-milestones.html">
+    <img src="assets/graduation-caps.jpg" alt="Graduation placeholder photography">
+    <div class="project-meta"><div><small data-en="University · Placeholder" data-ar="الجامعة · صورة مؤقتة">University · Placeholder</small><strong data-en="Milestones" data-ar="محطات لا تُنسى">Milestones</strong></div><div class="go">↗</div></div>
+  </a>
+</div>
+</div>
+</section>
+
+<section class="horizontal-stage">
+<div class="horizontal-sticky">
+<div class="horizontal-inner">
+<div class="shell horizontal-top reveal">
+  <div><div class="section-kicker" data-en="03 · YEAR IN FRAMES" data-ar="03 · العام في لقطات">03 · YEAR IN FRAMES</div><h2 class="horizontal-title" data-en="A gallery that moves with you." data-ar="معرض يتحرك معك.">A gallery that moves with you.</h2></div>
+  <div class="horizontal-count">01 — 07</div>
+</div>
+<div class="horizontal-track">
+  <figure class="h-card cinematic reveal"><img src="assets/kindergarten-story.jpg" alt=""><span>Kindergarten</span></figure>
+  <figure class="h-card tall cinematic reveal"><img src="assets/school-event.jpg" alt=""><span>School life</span></figure>
+  <figure class="h-card cinematic reveal"><img src="assets/school-exhibition.jpg" alt=""><span>Exhibition</span></figure>
+  <figure class="h-card tall cinematic reveal"><img src="assets/campus-life.jpg" alt=""><span>Campus</span></figure>
+  <figure class="h-card cinematic reveal"><img src="assets/university-group.jpg" alt=""><span>University</span></figure>
+  <figure class="h-card tall cinematic reveal"><img src="assets/kindergarten-circle.jpg" alt=""><span>Classroom</span></figure>
+  <figure class="h-card cinematic reveal"><img src="assets/graduation-caps.jpg" alt=""><span>Graduation</span></figure>
+</div>
+</div>
+</div>
+</section>
+
+<section id="services">
+<div class="shell">
+<div class="section-head reveal">
+  <div class="section-kicker" data-en="04 · SERVICES" data-ar="04 · الخدمات">04 · SERVICES</div>
+  <div><h2 class="section-title" data-en="From everyday memories to milestone days." data-ar="من تفاصيل اليوم إلى أهم المحطات.">From everyday memories to milestone days.</h2></div>
+</div>
+<div class="services-list">
+  <div class="service-row spotlight reveal" data-preview="assets/school-event.jpg"><div class="num">01</div><h3 data-en="School Photography" data-ar="التصوير المدرسي">School Photography</h3><p data-en="Student portraits, class groups, staff portraits and visual coverage designed around the rhythm of a school day." data-ar="صور للطلبة والمجموعات الصفية والكوادر وتغطية بصرية مصممة لتناسب إيقاع اليوم المدرسي.">Student portraits, class groups, staff portraits and visual coverage.</p><div class="arr">↗</div></div>
+  <div class="service-row spotlight reveal" data-preview="assets/school-exhibition.jpg"><div class="num">02</div><h3 data-en="Events & Celebrations" data-ar="الفعاليات والاحتفالات">Events & Celebrations</h3><p data-en="Assemblies, national celebrations, performances, competitions, exhibitions and community events." data-ar="طوابير واحتفالات وطنية وعروض ومسابقات ومعارض وفعاليات مجتمعية.">Assemblies, celebrations, performances and exhibitions.</p><div class="arr">↗</div></div>
+  <div class="service-row spotlight reveal" data-preview="assets/graduation-caps.jpg"><div class="num">03</div><h3 data-en="Graduation & Milestones" data-ar="التخرج والمحطات المهمة">Graduation & Milestones</h3><p data-en="Graduation portraits and ceremony coverage that feel polished, celebratory and timeless." data-ar="صور تخرج وتغطية مراسم بأسلوب أنيق واحتفالي ويبقى جميلاً مع مرور الوقت.">Graduation portraits and ceremony coverage.</p><div class="arr">↗</div></div>
+  <div class="service-row spotlight reveal" data-preview="assets/kindergarten-circle.jpg"><div class="num">04</div><h3 data-en="Kindergarten Stories" data-ar="حكايات رياض الأطفال">Kindergarten Stories</h3><p data-en="Warm, patient coverage for younger children — from classroom activities to end-of-year memories." data-ar="تغطية دافئة وصبورة للأطفال الأصغر سناً، من الأنشطة الصفية إلى ذكريات نهاية العام.">Warm, patient coverage for younger children.</p><div class="arr">↗</div></div>
+  <div class="service-row spotlight reveal" data-preview="assets/university-group.jpg"><div class="num">05</div><h3 data-en="University Coverage" data-ar="التغطية الجامعية">University Coverage</h3><p data-en="Campus events, student activities, ceremonies, conferences and institutional storytelling." data-ar="فعاليات الحرم الجامعي والأنشطة الطلابية والمراسم والمؤتمرات والقصص المؤسسية.">Campus events, ceremonies and institutional storytelling.</p><div class="arr">↗</div></div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="shell">
+<div class="section-head reveal">
+  <div class="section-kicker" data-en="05 · EDIT DIRECTION" data-ar="05 · أسلوب المعالجة">05 · EDIT DIRECTION</div>
+  <div><h2 class="section-title" data-en="The image before and after the mood." data-ar="الصورة قبل وبعد المعالجة البصرية.">The image before and after the mood.</h2>
+  <p class="section-copy" data-en="A placeholder interaction showing how an editing / color-grade comparison could work. This is a UI demo, not Yasser’s final grading." data-ar="تفاعل تجريبي يوضح كيف يمكن عرض مقارنة المعالجة والألوان. هذا نموذج للواجهة وليس المعالجة النهائية لياسر.">A placeholder interaction showing how an editing comparison could work.</p></div>
+</div>
+<div class="before-after reveal">
+  <div class="base"><img src="assets/university-group.jpg" alt=""></div>
+  <div class="after"><img src="assets/university-group.jpg" alt=""></div>
+  <div class="ba-label left" data-en="UNSTYLED PREVIEW" data-ar="معاينة أولية">UNSTYLED PREVIEW</div>
+  <div class="ba-label right" data-en="GRADE DIRECTION" data-ar="اتجاه المعالجة">GRADE DIRECTION</div>
+  <div class="ba-line"></div><div class="ba-handle">↔</div>
+  <input class="ba-input" type="range" min="0" max="100" value="58" aria-label="Before and after comparison">
+</div>
+</div>
+</section>
+
+<section>
+<div class="shell">
+<div class="section-head reveal">
+  <div class="section-kicker" data-en="06 · PROCESS" data-ar="06 · آلية العمل">06 · PROCESS</div>
+  <div><h2 class="section-title" data-en="Calm planning. Precise shooting. Clean delivery." data-ar="تخطيط هادئ. تصوير دقيق. تسليم منظّم.">Calm planning. Precise shooting. Clean delivery.</h2></div>
+</div>
+<div class="process-grid reveal">
+  <div class="step"><small>01</small><h3 data-en="Brief" data-ar="الفكرة">Brief</h3><p data-en="Understand the school, event, age group, key moments and final use." data-ar="فهم المدرسة أو الفعالية والفئة العمرية واللحظات المهمة والاستخدام النهائي.">Understand the school and key moments.</p></div>
+  <div class="step"><small>02</small><h3 data-en="Plan" data-ar="التخطيط">Plan</h3><p data-en="Build a simple shot list and timeline that fits naturally into the day." data-ar="إعداد قائمة لقطات وجدول بسيط ينسجم بشكل طبيعي مع سير اليوم.">Build a simple shot list and timeline.</p></div>
+  <div class="step"><small>03</small><h3 data-en="Shoot" data-ar="التصوير">Shoot</h3><p data-en="Work quietly, move quickly and stay alert for expressions and details." data-ar="العمل بهدوء وسرعة مع الانتباه للتعابير والتفاصيل.">Work quietly and stay alert for the moment.</p></div>
+  <div class="step"><small>04</small><h3 data-en="Deliver" data-ar="التسليم">Deliver</h3><p data-en="Curate, edit and organize the imagery into a polished collection." data-ar="اختيار الصور وتحريرها وتنظيمها في مجموعة مصقولة وسهلة الاستخدام.">Curate, edit and organize the imagery.</p></div>
+</div>
+</div>
+</section>
+
+<section id="contact">
+<div class="shell">
+<div class="contact reveal">
+  <div class="section-kicker" style="color:inherit" data-en="07 · CONTACT" data-ar="07 · تواصل">07 · CONTACT</div>
+  <h2 data-en="Have a moment worth capturing?" data-ar="هل لديك لحظة تستحق أن تُوثّق؟">Have a moment worth capturing?</h2>
+  <p data-en="For school photography, events, graduation coverage, educational campaigns or collaborations, contact Al Qanas Photography directly." data-ar="للتصوير المدرسي والفعاليات وحفلات التخرج والحملات التعليمية أو فرص التعاون، تواصل مباشرة مع القنّاص للتصوير.">For school photography, events, graduation coverage or collaborations, contact Al Qanas Photography directly.</p>
+  <a class="btn contact-cta" href="https://iwtsp.com/971502549876" target="_blank" rel="noopener"><span data-en="Start on WhatsApp" data-ar="ابدأ عبر واتساب">Start on WhatsApp</span><span>↗</span></a>
+  <div class="socials">
+    <a href="https://www.instagram.com/_alqanas_" target="_blank" rel="noopener">Instagram ↗</a>
+    <a href="https://www.youtube.com/channel/UC0wRJOMtjt2UkOzf7EjBNpg" target="_blank" rel="noopener">YouTube ↗</a>
+    <a href="https://linktr.ee/alqanas" target="_blank" rel="noopener">Linktree ↗</a>
+  </div>
+</div>
+</div>
+</section>
+</main>
+<footer><div class="shell footer-row"><span>© <span id="year"></span> Al Qanas Photography.</span><span data-en="Yasser Ismail · UAE" data-ar="ياسر إسماعيل · الإمارات">Yasser Ismail · UAE</span></div></footer>
+<script src="assets/app.js"></script>
+</body></html>
