@@ -1,6 +1,6 @@
 :root{
   --ink:#0A0908;--slate:#22333B;--ivory:#EAE0D5;--sand:#C6AC8F;--umber:#5E503F;
-  --royal:#315D8C;--royal-hi:#4D7FB2;--royal-soft:#91ABC6;--green:#25D366;
+  --royal:#315D8C;--royal-hi:#4D7FB2;--royal-soft:#91ABC6;--lilac:#8F82D8;--coral:#D88978;--green:#25D366;
   --bg:#0A0908;--bg2:#101719;--surface:#151B1E;--surface2:#1C282D;--text:#EAE0D5;--strong:#FFF9F2;--muted:#B5A798;
   --line:rgba(234,224,213,.13);--glass:rgba(16,23,25,.68);--glass-hi:rgba(234,224,213,.075);--shadow:0 30px 100px rgba(0,0,0,.38);
   --display:"Bricolage Grotesque",system-ui,sans-serif;--body:"DM Sans",system-ui,sans-serif;--serif:"Instrument Serif",serif;
