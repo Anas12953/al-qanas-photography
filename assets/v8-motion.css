@@ -1,0 +1,40 @@
+/* V8 motion polish — layered over the restored V6 liquid-glass direction. */
+:root{--motion:cubic-bezier(.16,1,.3,1)}
+.glass::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:linear-gradient(115deg,transparent 20%,rgba(255,255,255,.07) 42%,transparent 62%);transform:translateX(-110%);animation:glassDrift 10s var(--motion) infinite}
+@keyframes glassDrift{0%,65%{transform:translateX(-110%)}85%,100%{transform:translateX(110%)}}
+.nav{animation:navArrival .9s var(--motion) both}.brand-mark{animation:brandBreathe 4s ease-in-out infinite}
+@keyframes navArrival{from{opacity:0;transform:translateY(-28px) scale(.96);filter:blur(12px)}}
+@keyframes brandBreathe{50%{box-shadow:0 0 28px color-mix(in srgb,var(--royal-hi) 35%,transparent);transform:rotate(8deg) scale(1.04)}}
+.display,.page-title,.contact-stage h1{background-image:linear-gradient(100deg,currentColor 0 42%,color-mix(in srgb,currentColor 65%,var(--royal-hi)) 50%,currentColor 58% 100%);background-size:260% 100%;background-position:100% 0;-webkit-background-clip:text;background-clip:text;animation:textLight 9s ease-in-out infinite}
+@keyframes textLight{0%,60%{background-position:100% 0}85%,100%{background-position:-30% 0}}
+.eyebrow,.kicker{animation:microPulse 3.8s ease-in-out infinite}
+@keyframes microPulse{50%{color:var(--royal-soft);letter-spacing:.17em}}
+.home-copy,.page-hero-copy{isolation:isolate}.home-copy::after,.page-hero-copy::after{content:"";position:absolute;width:280px;height:280px;border-radius:50%;right:-120px;top:-120px;background:radial-gradient(circle,var(--lilac),transparent 68%);opacity:.08;filter:blur(18px);z-index:-1;animation:liquidOrb 9s ease-in-out infinite alternate}
+@keyframes liquidOrb{to{transform:translate3d(-70px,90px,0) scale(1.22);border-radius:42% 58% 63% 37%}}
+.home-photo,.about-portrait-shell{animation:photoFloat 7s ease-in-out infinite;transform-origin:center}
+@keyframes photoFloat{50%{transform:translateY(-8px) rotateX(1deg);box-shadow:0 45px 130px rgba(0,0,0,.36)}}
+.home-photo img,.about-portrait-shell img{animation:slowLens 14s ease-in-out infinite alternate}
+@keyframes slowLens{to{transform:scale(1.045) translate3d(0,-.6%,0)}}
+.photo-badge{animation:badgeFloat 5s ease-in-out infinite}@keyframes badgeFloat{50%{transform:translateY(-5px)}}
+.live-strip::before,.live-strip::after{content:"";position:absolute;top:0;bottom:0;width:90px;z-index:3;pointer-events:none}.live-strip::before{left:0;background:linear-gradient(90deg,var(--bg),transparent)}.live-strip::after{right:0;background:linear-gradient(-90deg,var(--bg),transparent)}
+.category-node{transition:transform .55s var(--motion),background .4s,border-color .4s}.category-node:hover{transform:translateY(-12px) rotateX(2deg);border-color:color-mix(in srgb,var(--royal-hi) 55%,var(--line))}
+.category-node .num,.service-no,.step-no{animation:numberGlow 4s ease-in-out infinite alternate}@keyframes numberGlow{to{filter:drop-shadow(0 0 16px color-mix(in srgb,var(--royal-hi) 55%,transparent));transform:translateY(-3px)}}
+.depth-ring.r1{animation-duration:21s}.depth-ring.r2{animation-direction:reverse;animation-duration:16s}.depth-ring.r3{animation-duration:12s}.depth-year{animation:yearDepth 5s ease-in-out infinite}@keyframes yearDepth{50%{transform:translateZ(-60px) scale(1.05);opacity:.11}}
+.depth-card img{transition:transform 1s var(--motion),filter .6s}.depth-card[data-pos="0"] img{animation:activeFrame 8s ease-in-out infinite alternate}@keyframes activeFrame{to{transform:scale(1.055)}}
+.service-link{position:relative;overflow:hidden}.service-link::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent,color-mix(in srgb,var(--royal) 10%,transparent),transparent);transform:translateX(-105%);transition:transform .8s var(--motion)}.service-link:hover::before{transform:translateX(105%)}
+.approach-dashboard .visual-card,.gallery-note,.process-step{transition:transform .55s var(--motion),border-color .4s,box-shadow .55s}.approach-dashboard .visual-card:hover,.gallery-note:hover,.process-step:hover{transform:translateY(-10px);border-color:color-mix(in srgb,var(--royal-hi) 60%,var(--line));box-shadow:0 34px 95px rgba(0,0,0,.28)}
+.radar-dot{animation:targetOrbit 5s ease-in-out infinite}@keyframes targetOrbit{50%{transform:translate(35px,-28px) scale(1.4)}}
+.orbit-label{animation:labelHover 5s ease-in-out infinite}.orbit-label.two{animation-delay:-1.6s}.orbit-label.three{animation-delay:-3.2s}@keyframes labelHover{50%{transform:translateY(-9px) rotate(1deg)}}
+.gallery-fan figure{animation:fanFloat 7s ease-in-out infinite}.gallery-fan figure:nth-child(2){animation-delay:-2.3s}.gallery-fan figure:nth-child(3){animation-delay:-4.6s}@keyframes fanFloat{50%{margin-top:-12px;filter:saturate(1.08)}}
+.gitem{isolation:isolate;will-change:transform}.gitem::before{content:"VIEW";position:absolute;z-index:4;top:16px;right:16px;padding:8px 11px;border-radius:999px;background:rgba(10,9,8,.46);border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(12px);font:700 8px/1 var(--body);letter-spacing:.14em;opacity:0;transform:translateY(-8px);transition:.35s var(--motion)}.gitem:hover::before{opacity:1;transform:none}.gitem:hover{z-index:3}
+.gitem:has(img[src*="al-ebtethal"]),.gitem:has(img[src*="al-budoor-kg-graduation"]),.gitem:has(img[src*="al-baheya"]),.gitem:has(img[src*="portrait-wall"]){background:#f5f5f2}.gitem:has(img[src*="al-ebtethal"]) img,.gitem:has(img[src*="al-budoor-kg-graduation"]) img,.gitem:has(img[src*="al-baheya"]) img,.gitem:has(img[src*="portrait-wall"]) img{object-fit:contain}
+.lightbox-frame>img{object-fit:contain;background:#0c0d10}.lightbox.open .lightbox-frame{animation:lightboxIn .65s var(--motion)}@keyframes lightboxIn{from{transform:scale(.82) rotateX(8deg);opacity:0}}
+.service-stack-card{overflow:hidden}.service-stack-card::before{content:"";position:absolute;inset:-30%;background:radial-gradient(circle at var(--gx,50%) var(--gy,50%),rgba(255,255,255,.11),transparent 27%);pointer-events:none}.service-art .big-icon{animation:iconFloat 4.6s ease-in-out infinite}@keyframes iconFloat{50%{transform:translateY(-12px) rotateY(12deg) scale(1.04)}}
+.process-step:nth-child(2){animation-delay:-1s}.process-step:nth-child(3){animation-delay:-2s}.process-step:nth-child(4){animation-delay:-3s}
+.contact-stage::after{content:"";position:absolute;inset:-40%;pointer-events:none;background:conic-gradient(from 0deg,transparent,var(--lilac),transparent,var(--royal-hi),transparent);opacity:.05;animation:contactAurora 18s linear infinite}@keyframes contactAurora{to{transform:rotate(360deg)}}
+.whatsapp-cta{position:relative;overflow:hidden}.whatsapp-cta::after{content:"";position:absolute;inset:-80% -20%;background:linear-gradient(100deg,transparent 35%,rgba(255,255,255,.42),transparent 65%);transform:translateX(-110%) rotate(8deg);animation:ctaShine 4.8s ease-in-out infinite}@keyframes ctaShine{0%,55%{transform:translateX(-110%) rotate(8deg)}85%,100%{transform:translateX(110%) rotate(8deg)}}
+.social-card{animation:socialHover 5s ease-in-out infinite}.social-card.youtube{animation-delay:-1.7s}.social-card.linktree{animation-delay:-3.4s}@keyframes socialHover{50%{margin-top:-10px}}
+.footer-row span:first-child::before{content:"●";color:var(--royal-hi);margin-inline-end:9px;animation:footerPulse 1.8s ease-in-out infinite}@keyframes footerPulse{50%{opacity:.25}}
+.reveal.in{animation:revealSettle .85s var(--motion) both}@keyframes revealSettle{0%{opacity:0;filter:blur(14px);transform:translateY(38px) scale(.975)}100%{opacity:1;filter:none;transform:none}}
+@media(prefers-reduced-motion:reduce){.glass::after,.display,.page-title,.home-photo,.home-photo img,.about-portrait-shell,.about-portrait-shell img,.photo-badge,.eyebrow,.kicker,.gitem,.social-card,.whatsapp-cta::after{animation:none!important}}
+@media(max-width:780px){.glass::after{opacity:.45}.home-photo,.about-portrait-shell{animation-duration:9s}.gitem::before{display:none}.live-strip::before,.live-strip::after{width:30px}}

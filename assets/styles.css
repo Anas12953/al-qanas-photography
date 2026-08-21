@@ -2,6 +2,7 @@
 @import url("./v6-story.css");
 @import url("./v6-pages.css");
 @import url("./v6-responsive.css");
+@import url("./v8-motion.css");
 
 /* Small V6 quality fixes retained after restoring the original glass direction. */
 .skip-link{position:fixed;z-index:40000;top:12px;left:12px;padding:11px 16px;border-radius:999px;background:var(--royal);color:#fff;font-weight:750;transform:translateY(-180%);transition:transform .2s var(--ease)}
