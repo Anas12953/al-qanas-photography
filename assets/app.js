@@ -1,11 +1,21 @@
 (()=>{
   const html=document.documentElement,body=document.body,qs=(s,e=document)=>e.querySelector(s),qsa=(s,e=document)=>[...e.querySelectorAll(s)],clamp=(n,a,b)=>Math.max(a,Math.min(b,n));
   const reduced=matchMedia('(prefers-reduced-motion:reduce)').matches,fine=matchMedia('(pointer:fine)').matches;
+  body.dataset.page=(location.pathname.split('/').pop()||'index.html').replace('.html','');
+  const skip=document.createElement('a');skip.className='skip-link';skip.href='#main-content';skip.textContent='Skip to content';body.prepend(skip);
+  const main=qs('main');if(main)main.id='main-content';
+  const progress=document.createElement('div');progress.className='scroll-progress';progress.setAttribute('aria-hidden','true');body.append(progress);
+  addEventListener('scroll',()=>{const max=document.documentElement.scrollHeight-innerHeight;progress.style.transform=`scaleX(${max>0?scrollY/max:0})`},{passive:true});
   let loaderDone=false;
   let theme=localStorage.getItem('alqanas-theme')||(matchMedia('(prefers-color-scheme: light)').matches?'light':'dark');
   let lang=localStorage.getItem('alqanas-lang')||'en';
   function applyTheme(v){theme=v;html.dataset.theme=v;localStorage.setItem('alqanas-theme',v);const m=qs('meta[name="theme-color"]');if(m)m.content=v==='dark'?'#0A0908':'#EAE0D5'}
   function applyLang(v){lang=v;html.lang=v;html.dir=v==='ar'?'rtl':'ltr';qsa('[data-en][data-ar]').forEach(el=>{if(!el.hasAttribute('data-typewriter'))el.textContent=el.dataset[v]});const b=qs('#langBtn');if(b)b.textContent=v==='ar'?'EN':'AR';localStorage.setItem('alqanas-lang',v);restartTypewriter()}
+  if(location.pathname.endsWith('gallery.html')){
+    const label=qs('.page-hero .eyebrow'),lead=qs('.page-hero .page-lead');
+    if(label){label.dataset.en='THE AL QANAS VISUAL ARCHIVE';label.dataset.ar='الأرشيف البصري للقنّاص'}
+    if(lead){lead.dataset.en='School life, framed with patience and intent — from first discoveries to graduation.';lead.dataset.ar='الحياة المدرسية مؤطرة بصبر وقصد — من أول اكتشافات الصف إلى التخرج.'}
+  }
   applyTheme(theme);applyLang(lang);
   async function hydrateFullYasser(){
     const imgs=qsa('img[src="assets/yasser-ismail.jpg"]');
